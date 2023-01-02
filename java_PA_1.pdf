@@ -1,0 +1,230 @@
+1.
+public class full_Name_CL_Args {
+    public static void main(String[] args) {
+        System.out.println("Full name is : " + args[0] + " " + args[1]);
+    }
+}
+2.
+import java.util.Scanner;
+public class MidVal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number : ");
+        int a = sc.nextInt();
+        System.out.println("Enter second number : ");
+        int b = sc.nextInt();
+        System.out.println("Enter third number : ");
+        int c = sc.nextInt();
+        if ((a > b && a < c) || (a > c && a < b)) {
+            System.out.println("Middle Value is : " + a);
+        } else if ((b > a && b < c) || (b < a && b > c)) {
+            System.out.println("Middle value is : " + b);
+        } else {
+            System.out.println("Middle value is : " + c);
+        }
+        sc.close();
+    }
+}
+3.
+import java.util.Scanner;
+public class Grades {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your marks out of 100 : ");
+        int marks = sc.nextInt();
+        if (marks > 70 && marks <= 100) {
+            System.out.println("Distinction");
+        }
+        else if (marks > 60 && marks <=70) {
+            System.out.println("First Class");
+        }
+        else if (marks > 50 && marks <=60) {
+            System.out.println("Second Class");
+        }
+        else if (marks > 35 && marks <=50) {
+            System.out.println("Pass Class");
+        }
+        else if (marks >= 0 && marks <= 35) {
+            System.out.println("Fail");
+        }
+        else {
+            System.out.println("Please enter valid marks...!");
+        }
+        sc.close();
+    }
+}
+4.
+public class Patern1 {
+    public static void main(String[] args) {
+        int i = 1;
+        int j = 1;
+        while (i <= 5) {
+            while (j <= i) {
+                System.out.print(" " + i * j);
+                j++;
+            }
+            j = 1;
+            System.out.println();
+            i++;
+        }
+    }
+}
+5.
+class Patern2 {
+    public static void main(String[] args) {
+        for (int i = 4; i >= 1; i--) {
+            for (int j = 1; j <= 4; j++) {
+                if (j > i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(j);
+                }
+            }
+            for (int j = 4; j >= 1; j--) {
+                if (j > i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(j);
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+6.
+import java.util.Scanner;
+public class factorial {
+    public static void main(String Args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number : ");
+        int number = sc.nextInt();
+        long factorial=1;
+        int i=1;
+        do
+        {
+            factorial=factorial*i;
+            i++;
+        }while(i<=number);
+        System.out.println("Factorial of "+number+" is:"+factorial);
+        sc.close();
+    }
+}
+7.
+import java.util.Scanner;
+public class week {
+    public static void main(String Args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter choice between 1 to 7 : ");
+        int day = sc.nextInt();
+        switch(day)
+        {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Wrong Choice");
+                break;
+        }
+        sc.close();
+    }
+}
+8.
+class Patern3 {
+    public static void main(String args[]) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = n - i; j > 0; j--) {
+                System.out.print("  ");
+            }
+            for (int j = i; j < 2 * i - 1; j++) {
+                System.out.print(j+" ");
+            }
+            for (int j = 2 * i - 1; j > i - 1; j--) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+9.
+public class Patern4 {
+    public static void main(String[] args) {
+        int alphabet = 64;
+        for (int i = 1; i < 6; i++) {
+            for (int j = 1; j < i + 1; j++) {
+                System.out.print((char) (alphabet + j) + " ");
+            }
+            for (int j = i-1; j >= 1; j--) {
+                System.out.print((char) (alphabet + j) + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+10.
+public class Pascal {
+    public static void main(String[] args) {
+        int n = 8;
+        for (int i = 0; i < n; i++) {
+            for (int space = n; space > i; space--) {
+                System.out.print(" ");
+            }
+            int num = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.print(num + " ");
+                num = (num * (i-j))/(j + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+11.
+public class fibonacci {
+    public static void main(String args[]) {
+        int n1=0,n2=1,n3,i,count=10;
+        System.out.print(n1+" "+n2);
+
+        for(i=2;i<count;++i)
+        {
+            n3=n1+n2;
+            System.out.print(" "+n3);
+            n1=n2;
+            n2=n3;
+        }   
+    }
+}
+12.
+import java.util.Scanner;
+public class reverse {
+    public static void main(String Args[]) {
+        int reversed = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter four digit number : ");
+        int num = sc.nextInt();
+        while (num != 0) {
+            int d = num % 10;
+            reversed = reversed * 10 + d;
+            num = num / 10;
+        }
+        System.out.println("Reversed number:" + reversed);
+        sc.close();
+    }
+}
